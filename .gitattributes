@@ -1,0 +1,17 @@
+# 统一行尾为 LF，避免跨平台出现整文件级别的假 diff
+* text=auto eol=lf
+
+# 二进制文件不做行尾转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ogg binary
+*.ttf binary
+*.jar binary
+*.xlsx binary
+*.docx binary
+*.pdf binary
+*.psd binary
+*.bbmodel binary
+*.zip binary

@@ -1,0 +1,409 @@
+{
+  "parent": "teyvat_artifacts:origin_of_all_evil",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "teyvat_artifacts:condensed_resin"
+    },
+    "title": {
+      "translate": "advancements.teyvat_artifacts.artifact_sets.index.title"
+    },
+    "description": {
+      "translate": "advancements.teyvat_artifacts.artifact_sets.index.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "x": 2,
+    "y": 0
+  },
+  "criteria": {
+    "initiate": {
+      "trigger": "minecraft:impossible"
+    },
+    "lucky": {
+      "trigger": "minecraft:impossible"
+    },
+    "adventurer": {
+      "trigger": "minecraft:impossible"
+    },
+    "traveling_doctor": {
+      "trigger": "minecraft:impossible"
+    },
+    "resolution_of_sojourner": {
+      "trigger": "minecraft:impossible"
+    },
+    "tiny_miracle": {
+      "trigger": "minecraft:impossible"
+    },
+    "berserker": {
+      "trigger": "minecraft:impossible"
+    },
+    "instructor": {
+      "trigger": "minecraft:impossible"
+    },
+    "the_exile": {
+      "trigger": "minecraft:impossible"
+    },
+    "defenders_will": {
+      "trigger": "minecraft:impossible"
+    },
+    "brave_heart": {
+      "trigger": "minecraft:impossible"
+    },
+    "martial_artist": {
+      "trigger": "minecraft:impossible"
+    },
+    "gambler": {
+      "trigger": "minecraft:impossible"
+    },
+    "scholar": {
+      "trigger": "minecraft:impossible"
+    },
+    "gladiators_finale": {
+      "trigger": "minecraft:impossible"
+    },
+    "wanderers_troupe": {
+      "trigger": "minecraft:impossible"
+    },
+    "prayers_for_thunder": {
+      "trigger": "minecraft:impossible"
+    },
+    "prayers_for_destiny": {
+      "trigger": "minecraft:impossible"
+    },
+    "prayers_for_illumination": {
+      "trigger": "minecraft:impossible"
+    },
+    "prayers_to_springtime": {
+      "trigger": "minecraft:impossible"
+    },
+    "thundering_fury": {
+      "trigger": "minecraft:impossible"
+    },
+    "thundersoother": {
+      "trigger": "minecraft:impossible"
+    },
+    "pale_flame": {
+      "trigger": "minecraft:impossible"
+    },
+    "tenacity_of_the_millelith": {
+      "trigger": "minecraft:impossible"
+    },
+    "celestial_gift": {
+      "trigger": "minecraft:impossible"
+    },
+    "disenchantment_in_deep_shadow": {
+      "trigger": "minecraft:impossible"
+    },
+    "blizzard_strayer": {
+      "trigger": "minecraft:impossible"
+    },
+    "heart_of_depth": {
+      "trigger": "minecraft:impossible"
+    },
+    "maiden_beloved": {
+      "trigger": "minecraft:impossible"
+    },
+    "viridescent_venerer": {
+      "trigger": "minecraft:impossible"
+    },
+    "bloodstained_chivalry": {
+      "trigger": "minecraft:impossible"
+    },
+    "noblesse_oblige": {
+      "trigger": "minecraft:impossible"
+    },
+    "archaic_petra": {
+      "trigger": "minecraft:impossible"
+    },
+    "retracing_bolide": {
+      "trigger": "minecraft:impossible"
+    },
+    "echoes_of_an_offering": {
+      "trigger": "minecraft:impossible"
+    },
+    "vermillion_hereafter": {
+      "trigger": "minecraft:impossible"
+    },
+    "crimson_witch_of_flames": {
+      "trigger": "minecraft:impossible"
+    },
+    "lavawalker": {
+      "trigger": "minecraft:impossible"
+    },
+    "emblem_of_severed_fate": {
+      "trigger": "minecraft:impossible"
+    },
+    "shimenawas_reminiscence": {
+      "trigger": "minecraft:impossible"
+    },
+    "husk_of_opulent_dreams": {
+      "trigger": "minecraft:impossible"
+    },
+    "ocean_hued_clam": {
+      "trigger": "minecraft:impossible"
+    },
+    "nymphs_dream": {
+      "trigger": "minecraft:impossible"
+    },
+    "vourukashas_glow": {
+      "trigger": "minecraft:impossible"
+    },
+    "deepwood_memories": {
+      "trigger": "minecraft:impossible"
+    },
+    "gilded_dreams": {
+      "trigger": "minecraft:impossible"
+    },
+    "desert_pavilion_chronicle": {
+      "trigger": "minecraft:impossible"
+    },
+    "flower_of_paradise_lost": {
+      "trigger": "minecraft:impossible"
+    },
+    "nighttime_whispers": {
+      "trigger": "minecraft:impossible"
+    },
+    "song_of_days_past": {
+      "trigger": "minecraft:impossible"
+    },
+    "golden_troupe": {
+      "trigger": "minecraft:impossible"
+    },
+    "marechaussee_hunter": {
+      "trigger": "minecraft:impossible"
+    },
+    "fragment_of_harmonic_whimsy": {
+      "trigger": "minecraft:impossible"
+    },
+    "unfinished_reverie": {
+      "trigger": "minecraft:impossible"
+    },
+    "finale_of_the_deep_galleries": {
+      "trigger": "minecraft:impossible"
+    },
+    "long_nights_oath": {
+      "trigger": "minecraft:impossible"
+    },
+    "obsidian_codex": {
+      "trigger": "minecraft:impossible"
+    },
+    "scroll_of_the_hero_of_cinder_city": {
+      "trigger": "minecraft:impossible"
+    },
+    "a_day_carved_from_rising_winds": {
+      "trigger": "minecraft:impossible"
+    },
+    "aubade_of_morningstar_and_moon": {
+      "trigger": "minecraft:impossible"
+    },
+    "night_of_the_skys_unveiling": {
+      "trigger": "minecraft:impossible"
+    },
+    "silken_moons_serenade": {
+      "trigger": "minecraft:impossible"
+    },
+    "heart_of_the_furnace": {
+      "trigger": "minecraft:impossible"
+    },
+    "scarlet_proof": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "initiate"
+    ],
+    [
+      "lucky"
+    ],
+    [
+      "adventurer"
+    ],
+    [
+      "traveling_doctor"
+    ],
+    [
+      "resolution_of_sojourner"
+    ],
+    [
+      "tiny_miracle"
+    ],
+    [
+      "berserker"
+    ],
+    [
+      "instructor"
+    ],
+    [
+      "the_exile"
+    ],
+    [
+      "defenders_will"
+    ],
+    [
+      "brave_heart"
+    ],
+    [
+      "martial_artist"
+    ],
+    [
+      "gambler"
+    ],
+    [
+      "scholar"
+    ],
+    [
+      "gladiators_finale"
+    ],
+    [
+      "wanderers_troupe"
+    ],
+    [
+      "prayers_for_thunder"
+    ],
+    [
+      "prayers_for_destiny"
+    ],
+    [
+      "prayers_for_illumination"
+    ],
+    [
+      "prayers_to_springtime"
+    ],
+    [
+      "thundering_fury"
+    ],
+    [
+      "thundersoother"
+    ],
+    [
+      "pale_flame"
+    ],
+    [
+      "tenacity_of_the_millelith"
+    ],
+    [
+      "celestial_gift"
+    ],
+    [
+      "disenchantment_in_deep_shadow"
+    ],
+    [
+      "blizzard_strayer"
+    ],
+    [
+      "heart_of_depth"
+    ],
+    [
+      "maiden_beloved"
+    ],
+    [
+      "viridescent_venerer"
+    ],
+    [
+      "bloodstained_chivalry"
+    ],
+    [
+      "noblesse_oblige"
+    ],
+    [
+      "archaic_petra"
+    ],
+    [
+      "retracing_bolide"
+    ],
+    [
+      "echoes_of_an_offering"
+    ],
+    [
+      "vermillion_hereafter"
+    ],
+    [
+      "crimson_witch_of_flames"
+    ],
+    [
+      "lavawalker"
+    ],
+    [
+      "emblem_of_severed_fate"
+    ],
+    [
+      "shimenawas_reminiscence"
+    ],
+    [
+      "husk_of_opulent_dreams"
+    ],
+    [
+      "ocean_hued_clam"
+    ],
+    [
+      "nymphs_dream"
+    ],
+    [
+      "vourukashas_glow"
+    ],
+    [
+      "deepwood_memories"
+    ],
+    [
+      "gilded_dreams"
+    ],
+    [
+      "desert_pavilion_chronicle"
+    ],
+    [
+      "flower_of_paradise_lost"
+    ],
+    [
+      "nighttime_whispers"
+    ],
+    [
+      "song_of_days_past"
+    ],
+    [
+      "golden_troupe"
+    ],
+    [
+      "marechaussee_hunter"
+    ],
+    [
+      "fragment_of_harmonic_whimsy"
+    ],
+    [
+      "unfinished_reverie"
+    ],
+    [
+      "finale_of_the_deep_galleries"
+    ],
+    [
+      "long_nights_oath"
+    ],
+    [
+      "obsidian_codex"
+    ],
+    [
+      "scroll_of_the_hero_of_cinder_city"
+    ],
+    [
+      "a_day_carved_from_rising_winds"
+    ],
+    [
+      "aubade_of_morningstar_and_moon"
+    ],
+    [
+      "night_of_the_skys_unveiling"
+    ],
+    [
+      "silken_moons_serenade"
+    ],
+    [
+      "heart_of_the_furnace"
+    ],
+    [
+      "scarlet_proof"
+    ]
+  ]
+}

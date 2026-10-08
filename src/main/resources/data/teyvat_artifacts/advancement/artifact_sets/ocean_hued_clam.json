@@ -1,0 +1,90 @@
+{
+  "parent": "teyvat_artifacts:artifact_sets/husk_of_opulent_dreams",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "teyvat_artifacts:ocean_hued_clam_flower"
+    },
+    "title": {
+      "translate": "tooltip.teyvat_artifacts.set.ocean_hued_clam"
+    },
+    "description": {
+      "translate": "advancements.teyvat_artifacts.set.ocean_hued_clam.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "x": 2.0,
+    "y": 0.0
+  },
+  "criteria": {
+    "flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:ocean_hued_clam_flower"
+          }
+        ]
+      }
+    },
+    "feather": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:ocean_hued_clam_feather"
+          }
+        ]
+      }
+    },
+    "sands": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:ocean_hued_clam_sands"
+          }
+        ]
+      }
+    },
+    "goblet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:ocean_hued_clam_goblet"
+          }
+        ]
+      }
+    },
+    "circlet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:ocean_hued_clam_circlet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flower"
+    ],
+    [
+      "feather"
+    ],
+    [
+      "sands"
+    ],
+    [
+      "goblet"
+    ],
+    [
+      "circlet"
+    ]
+  ]
+}

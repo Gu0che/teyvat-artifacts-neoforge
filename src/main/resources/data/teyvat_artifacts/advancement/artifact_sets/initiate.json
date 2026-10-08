@@ -1,0 +1,51 @@
+{
+  "parent": "teyvat_artifacts:artifact_sets/common",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "teyvat_artifacts:initiate_flower"
+    },
+    "title": {
+      "translate": "tooltip.teyvat_artifacts.set.initiate"
+    },
+    "description": {
+      "translate": "advancements.teyvat_artifacts.set.initiate.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "x": 2.0,
+    "y": 0.0
+  },
+  "criteria": {
+    "flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:initiate_flower"
+          }
+        ]
+      }
+    },
+    "feather": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:initiate_feather"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flower"
+    ],
+    [
+      "feather"
+    ]
+  ]
+}

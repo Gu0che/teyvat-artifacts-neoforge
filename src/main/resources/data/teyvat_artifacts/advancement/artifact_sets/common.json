@@ -1,0 +1,145 @@
+﻿{
+    "parent":  "teyvat_artifacts:artifact_sets/index",
+    "display":  {
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "teyvat_artifacts:wanderers_troupe_flower"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.teyvat_artifacts.artifact_sets.common.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancements.teyvat_artifacts.artifact_sets.common.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true,
+                    "hidden":  false,
+                    "x":  0,
+                    "y":  2
+                },
+    "criteria":  {
+                     "initiate":  {
+                                      "trigger":  "minecraft:impossible"
+                                  },
+                     "lucky":  {
+                                   "trigger":  "minecraft:impossible"
+                               },
+                     "adventurer":  {
+                                        "trigger":  "minecraft:impossible"
+                                    },
+                     "traveling_doctor":  {
+                                              "trigger":  "minecraft:impossible"
+                                          },
+                     "resolution_of_sojourner":  {
+                                                     "trigger":  "minecraft:impossible"
+                                                 },
+                     "tiny_miracle":  {
+                                          "trigger":  "minecraft:impossible"
+                                      },
+                     "berserker":  {
+                                       "trigger":  "minecraft:impossible"
+                                   },
+                     "instructor":  {
+                                        "trigger":  "minecraft:impossible"
+                                    },
+                     "the_exile":  {
+                                       "trigger":  "minecraft:impossible"
+                                   },
+                     "defenders_will":  {
+                                            "trigger":  "minecraft:impossible"
+                                        },
+                     "brave_heart":  {
+                                         "trigger":  "minecraft:impossible"
+                                     },
+                     "martial_artist":  {
+                                            "trigger":  "minecraft:impossible"
+                                        },
+                     "gambler":  {
+                                     "trigger":  "minecraft:impossible"
+                                 },
+                     "scholar":  {
+                                     "trigger":  "minecraft:impossible"
+                                 },
+                     "gladiators_finale":  {
+                                               "trigger":  "minecraft:impossible"
+                                           },
+                     "wanderers_troupe":  {
+                                              "trigger":  "minecraft:impossible"
+                                          },
+                     "prayers_for_thunder":  {
+                                                 "trigger":  "minecraft:impossible"
+                                             },
+                     "prayers_for_destiny":  {
+                                                 "trigger":  "minecraft:impossible"
+                                             },
+                     "prayers_for_illumination":  {
+                                                      "trigger":  "minecraft:impossible"
+                                                  },
+                     "prayers_to_springtime":  {
+                                                   "trigger":  "minecraft:impossible"
+                                               }
+                 },
+    "requirements":  [
+                         [
+                             "initiate"
+                         ],
+                         [
+                             "lucky"
+                         ],
+                         [
+                             "adventurer"
+                         ],
+                         [
+                             "traveling_doctor"
+                         ],
+                         [
+                             "resolution_of_sojourner"
+                         ],
+                         [
+                             "tiny_miracle"
+                         ],
+                         [
+                             "berserker"
+                         ],
+                         [
+                             "instructor"
+                         ],
+                         [
+                             "the_exile"
+                         ],
+                         [
+                             "defenders_will"
+                         ],
+                         [
+                             "brave_heart"
+                         ],
+                         [
+                             "martial_artist"
+                         ],
+                         [
+                             "gambler"
+                         ],
+                         [
+                             "scholar"
+                         ],
+                         [
+                             "gladiators_finale"
+                         ],
+                         [
+                             "wanderers_troupe"
+                         ],
+                         [
+                             "prayers_for_thunder"
+                         ],
+                         [
+                             "prayers_for_destiny"
+                         ],
+                         [
+                             "prayers_for_illumination"
+                         ],
+                         [
+                             "prayers_to_springtime"
+                         ]
+                     ]
+}

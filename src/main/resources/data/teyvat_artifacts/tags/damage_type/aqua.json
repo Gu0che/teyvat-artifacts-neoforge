@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "traveloptics:aqua_magic", "required": false },
+    { "id": "traveloptics:extended_water_bolt", "required": false }
+  ]
+}

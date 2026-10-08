@@ -1,0 +1,90 @@
+{
+  "parent": "teyvat_artifacts:artifact_sets/crimson_witch_of_flames",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "teyvat_artifacts:lavawalker_flower"
+    },
+    "title": {
+      "translate": "tooltip.teyvat_artifacts.set.lavawalker"
+    },
+    "description": {
+      "translate": "advancements.teyvat_artifacts.set.lavawalker.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "x": 2.0,
+    "y": 0.0
+  },
+  "criteria": {
+    "flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:lavawalker_flower"
+          }
+        ]
+      }
+    },
+    "feather": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:lavawalker_feather"
+          }
+        ]
+      }
+    },
+    "sands": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:lavawalker_sands"
+          }
+        ]
+      }
+    },
+    "goblet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:lavawalker_goblet"
+          }
+        ]
+      }
+    },
+    "circlet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:lavawalker_circlet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flower"
+    ],
+    [
+      "feather"
+    ],
+    [
+      "sands"
+    ],
+    [
+      "goblet"
+    ],
+    [
+      "circlet"
+    ]
+  ]
+}

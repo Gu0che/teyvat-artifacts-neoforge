@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "teyvat_artifacts:item/desert_pavilion_chronicle_flower"
+  }
+}

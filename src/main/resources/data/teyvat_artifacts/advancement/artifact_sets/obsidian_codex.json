@@ -1,0 +1,90 @@
+{
+  "parent": "teyvat_artifacts:artifact_sets/long_nights_oath",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "teyvat_artifacts:obsidian_codex_flower"
+    },
+    "title": {
+      "translate": "tooltip.teyvat_artifacts.set.obsidian_codex"
+    },
+    "description": {
+      "translate": "advancements.teyvat_artifacts.set.obsidian_codex.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "x": 2.0,
+    "y": 0.0
+  },
+  "criteria": {
+    "flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:obsidian_codex_flower"
+          }
+        ]
+      }
+    },
+    "feather": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:obsidian_codex_feather"
+          }
+        ]
+      }
+    },
+    "sands": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:obsidian_codex_sands"
+          }
+        ]
+      }
+    },
+    "goblet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:obsidian_codex_goblet"
+          }
+        ]
+      }
+    },
+    "circlet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:obsidian_codex_circlet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flower"
+    ],
+    [
+      "feather"
+    ],
+    [
+      "sands"
+    ],
+    [
+      "goblet"
+    ],
+    [
+      "circlet"
+    ]
+  ]
+}

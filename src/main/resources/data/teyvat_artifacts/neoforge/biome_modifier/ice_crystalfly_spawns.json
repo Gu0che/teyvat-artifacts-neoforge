@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#teyvat_artifacts:spawns/ice_crystalfly",
+  "spawners": {
+    "type": "teyvat_artifacts:ice_crystalfly",
+    "weight": 8,
+    "minCount": 1,
+    "maxCount": 4
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "#irons_spellbooks:fire_magic", "required": false },
+    { "id": "irons_spellbooks:fire_field", "required": false },
+    { "id": "traveloptics:asteroid_impact_crater", "required": false },
+    { "id": "traveloptics:tectonic_crest", "required": false },
+    { "id": "cataclysm_spellbooks:blazing_aoe", "required": false },
+    { "id": "cataclysm_spellbooks:scorched_earth_aoe", "required": false }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "teyvat_artifacts:item/finale_of_the_deep_galleries_sands"
+  }
+}

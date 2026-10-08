@@ -1,0 +1,49 @@
+﻿{
+    "parent":  "teyvat_artifacts:artifact_sets/index",
+    "display":  {
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "teyvat_artifacts:emblem_of_severed_fate_flower"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.teyvat_artifacts.artifact_sets.inazuma.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancements.teyvat_artifacts.artifact_sets.inazuma.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true,
+                    "hidden":  false,
+                    "x":  0,
+                    "y":  11
+                },
+    "criteria":  {
+                     "emblem_of_severed_fate":  {
+                                                    "trigger":  "minecraft:impossible"
+                                                },
+                     "shimenawas_reminiscence":  {
+                                                     "trigger":  "minecraft:impossible"
+                                                 },
+                     "husk_of_opulent_dreams":  {
+                                                    "trigger":  "minecraft:impossible"
+                                                },
+                     "ocean_hued_clam":  {
+                                             "trigger":  "minecraft:impossible"
+                                         }
+                 },
+    "requirements":  [
+                         [
+                             "emblem_of_severed_fate"
+                         ],
+                         [
+                             "shimenawas_reminiscence"
+                         ],
+                         [
+                             "husk_of_opulent_dreams"
+                         ],
+                         [
+                             "ocean_hued_clam"
+                         ]
+                     ]
+}

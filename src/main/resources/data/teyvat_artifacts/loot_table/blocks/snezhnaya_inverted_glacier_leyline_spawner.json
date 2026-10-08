@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "teyvat_artifacts:snezhnaya_inverted_glacier_leyline_spawner"
+        }
+      ]
+    }
+  ]
+}

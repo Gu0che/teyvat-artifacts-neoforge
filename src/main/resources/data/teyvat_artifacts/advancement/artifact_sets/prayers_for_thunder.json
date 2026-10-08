@@ -1,0 +1,38 @@
+{
+  "parent": "teyvat_artifacts:artifact_sets/wanderers_troupe",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "teyvat_artifacts:prayers_for_thunder_circlet"
+    },
+    "title": {
+      "translate": "tooltip.teyvat_artifacts.set.prayers_for_thunder"
+    },
+    "description": {
+      "translate": "advancements.teyvat_artifacts.set.prayers_for_thunder.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "x": 2.0,
+    "y": 0.0
+  },
+  "criteria": {
+    "circlet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:prayers_for_thunder_circlet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "circlet"
+    ]
+  ]
+}

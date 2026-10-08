@@ -1,0 +1,90 @@
+{
+  "parent": "teyvat_artifacts:artifact_sets/desert_pavilion_chronicle",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "teyvat_artifacts:flower_of_paradise_lost_flower"
+    },
+    "title": {
+      "translate": "tooltip.teyvat_artifacts.set.flower_of_paradise_lost"
+    },
+    "description": {
+      "translate": "advancements.teyvat_artifacts.set.flower_of_paradise_lost.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "x": 2.0,
+    "y": 0.0
+  },
+  "criteria": {
+    "flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:flower_of_paradise_lost_flower"
+          }
+        ]
+      }
+    },
+    "feather": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:flower_of_paradise_lost_feather"
+          }
+        ]
+      }
+    },
+    "sands": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:flower_of_paradise_lost_sands"
+          }
+        ]
+      }
+    },
+    "goblet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:flower_of_paradise_lost_goblet"
+          }
+        ]
+      }
+    },
+    "circlet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:flower_of_paradise_lost_circlet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flower"
+    ],
+    [
+      "feather"
+    ],
+    [
+      "sands"
+    ],
+    [
+      "goblet"
+    ],
+    [
+      "circlet"
+    ]
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "parent": "teyvat_artifacts:artifact_sets/tiny_miracle",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "teyvat_artifacts:berserker_flower"
+    },
+    "title": {
+      "translate": "tooltip.teyvat_artifacts.set.berserker"
+    },
+    "description": {
+      "translate": "advancements.teyvat_artifacts.set.berserker.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "x": 2.0,
+    "y": 0.0
+  },
+  "criteria": {
+    "flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:berserker_flower"
+          }
+        ]
+      }
+    },
+    "feather": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:berserker_feather"
+          }
+        ]
+      }
+    },
+    "sands": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:berserker_sands"
+          }
+        ]
+      }
+    },
+    "goblet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:berserker_goblet"
+          }
+        ]
+      }
+    },
+    "circlet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:berserker_circlet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flower"
+    ],
+    [
+      "feather"
+    ],
+    [
+      "sands"
+    ],
+    [
+      "goblet"
+    ],
+    [
+      "circlet"
+    ]
+  ]
+}

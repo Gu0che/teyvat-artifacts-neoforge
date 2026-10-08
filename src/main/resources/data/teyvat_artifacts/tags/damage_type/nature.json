@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "#irons_spellbooks:nature_magic", "required": false },
+    { "id": "irons_spellbooks:poison_cloud", "required": false },
+    { "id": "traveloptics:aerial_collapse", "required": false },
+    { "id": "traveloptics:primordial_crest", "required": false }
+  ]
+}

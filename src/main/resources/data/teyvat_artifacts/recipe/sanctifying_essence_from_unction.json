@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "teyvat_artifacts:sanctifying_unction"
+    },
+    {
+      "item": "teyvat_artifacts:sanctifying_unction"
+    },
+    {
+      "item": "teyvat_artifacts:sanctifying_unction"
+    },
+    {
+      "item": "teyvat_artifacts:sanctifying_unction"
+    }
+  ],
+  "result": {
+    "id": "teyvat_artifacts:sanctifying_essence",
+    "count": 1
+  }
+}

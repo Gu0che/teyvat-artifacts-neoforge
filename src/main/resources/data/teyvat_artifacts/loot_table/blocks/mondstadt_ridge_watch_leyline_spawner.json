@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "teyvat_artifacts:mondstadt_ridge_watch_leyline_spawner"
+        }
+      ]
+    }
+  ]
+}

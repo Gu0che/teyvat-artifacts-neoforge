@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 711839289,
+    "separation": 8,
+    "spacing": 32
+  },
+  "structures": [
+    {
+      "structure": "teyvat_artifacts:inazuma_slumbering_court_leyline_spawner",
+      "weight": 1
+    }
+  ]
+}

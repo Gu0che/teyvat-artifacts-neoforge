@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "cataclysm_spellbooks:abyssal_magic", "required": false }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#teyvat_artifacts:spawns/geo_crystalfly",
+  "spawners": {
+    "type": "teyvat_artifacts:geo_crystalfly",
+    "weight": 8,
+    "minCount": 1,
+    "maxCount": 4
+  }
+}

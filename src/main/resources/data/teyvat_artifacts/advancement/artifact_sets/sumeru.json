@@ -1,0 +1,61 @@
+﻿{
+    "parent":  "teyvat_artifacts:artifact_sets/index",
+    "display":  {
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "teyvat_artifacts:deepwood_memories_flower"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.teyvat_artifacts.artifact_sets.sumeru.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancements.teyvat_artifacts.artifact_sets.sumeru.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true,
+                    "hidden":  false,
+                    "x":  0,
+                    "y":  14
+                },
+    "criteria":  {
+                     "nymphs_dream":  {
+                                          "trigger":  "minecraft:impossible"
+                                      },
+                     "vourukashas_glow":  {
+                                              "trigger":  "minecraft:impossible"
+                                          },
+                     "deepwood_memories":  {
+                                               "trigger":  "minecraft:impossible"
+                                           },
+                     "gilded_dreams":  {
+                                           "trigger":  "minecraft:impossible"
+                                       },
+                     "desert_pavilion_chronicle":  {
+                                                       "trigger":  "minecraft:impossible"
+                                                   },
+                     "flower_of_paradise_lost":  {
+                                                     "trigger":  "minecraft:impossible"
+                                                 }
+                 },
+    "requirements":  [
+                         [
+                             "nymphs_dream"
+                         ],
+                         [
+                             "vourukashas_glow"
+                         ],
+                         [
+                             "deepwood_memories"
+                         ],
+                         [
+                             "gilded_dreams"
+                         ],
+                         [
+                             "desert_pavilion_chronicle"
+                         ],
+                         [
+                             "flower_of_paradise_lost"
+                         ]
+                     ]
+}

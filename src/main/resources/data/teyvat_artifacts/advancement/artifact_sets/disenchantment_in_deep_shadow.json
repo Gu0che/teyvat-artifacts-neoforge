@@ -1,0 +1,90 @@
+{
+  "parent": "teyvat_artifacts:artifact_sets/celestial_gift",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "teyvat_artifacts:disenchantment_in_deep_shadow_flower"
+    },
+    "title": {
+      "translate": "tooltip.teyvat_artifacts.set.disenchantment_in_deep_shadow"
+    },
+    "description": {
+      "translate": "advancements.teyvat_artifacts.set.disenchantment_in_deep_shadow.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "x": 2.0,
+    "y": 0.0
+  },
+  "criteria": {
+    "flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:disenchantment_in_deep_shadow_flower"
+          }
+        ]
+      }
+    },
+    "feather": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:disenchantment_in_deep_shadow_feather"
+          }
+        ]
+      }
+    },
+    "sands": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:disenchantment_in_deep_shadow_sands"
+          }
+        ]
+      }
+    },
+    "goblet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:disenchantment_in_deep_shadow_goblet"
+          }
+        ]
+      }
+    },
+    "circlet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:disenchantment_in_deep_shadow_circlet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flower"
+    ],
+    [
+      "feather"
+    ],
+    [
+      "sands"
+    ],
+    [
+      "goblet"
+    ],
+    [
+      "circlet"
+    ]
+  ]
+}

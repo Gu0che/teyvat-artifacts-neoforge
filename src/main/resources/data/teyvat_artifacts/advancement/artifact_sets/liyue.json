@@ -1,0 +1,73 @@
+﻿{
+    "parent":  "teyvat_artifacts:artifact_sets/index",
+    "display":  {
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "teyvat_artifacts:archaic_petra_flower"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.teyvat_artifacts.artifact_sets.liyue.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancements.teyvat_artifacts.artifact_sets.liyue.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true,
+                    "hidden":  false,
+                    "x":  0,
+                    "y":  8
+                },
+    "criteria":  {
+                     "bloodstained_chivalry":  {
+                                                   "trigger":  "minecraft:impossible"
+                                               },
+                     "noblesse_oblige":  {
+                                             "trigger":  "minecraft:impossible"
+                                         },
+                     "archaic_petra":  {
+                                           "trigger":  "minecraft:impossible"
+                                       },
+                     "retracing_bolide":  {
+                                              "trigger":  "minecraft:impossible"
+                                          },
+                     "echoes_of_an_offering":  {
+                                                   "trigger":  "minecraft:impossible"
+                                               },
+                     "vermillion_hereafter":  {
+                                                  "trigger":  "minecraft:impossible"
+                                              },
+                     "crimson_witch_of_flames":  {
+                                                     "trigger":  "minecraft:impossible"
+                                                 },
+                     "lavawalker":  {
+                                        "trigger":  "minecraft:impossible"
+                                    }
+                 },
+    "requirements":  [
+                         [
+                             "bloodstained_chivalry"
+                         ],
+                         [
+                             "noblesse_oblige"
+                         ],
+                         [
+                             "archaic_petra"
+                         ],
+                         [
+                             "retracing_bolide"
+                         ],
+                         [
+                             "echoes_of_an_offering"
+                         ],
+                         [
+                             "vermillion_hereafter"
+                         ],
+                         [
+                             "crimson_witch_of_flames"
+                         ],
+                         [
+                             "lavawalker"
+                         ]
+                     ]
+}

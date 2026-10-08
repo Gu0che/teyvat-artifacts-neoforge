@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "jujutsu_spelling:jujutsu_fire", "required": false },
+    { "id": "jujutsu_spelling:jujutsu_frost", "required": false },
+    { "id": "jujutsu_spelling:jujutsu_lightning", "required": false },
+    { "id": "jujutsu_spelling:jujutsu_magic", "required": false },
+    { "id": "jujutsu_spelling:jujutsu_physical", "required": false },
+    { "id": "jujutsu_spelling:jujutsu_rend", "required": false },
+    { "id": "jujutsu_spelling:jujutsu_slash", "required": false },
+    { "id": "jujutsu_spelling:jujutsu_water", "required": false }
+  ]
+}

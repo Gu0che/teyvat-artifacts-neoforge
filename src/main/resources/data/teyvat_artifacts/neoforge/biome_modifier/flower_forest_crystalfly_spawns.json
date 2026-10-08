@@ -1,0 +1,48 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#teyvat_artifacts:spawns/flower_forest_crystalflies",
+  "spawners": [
+    {
+      "type": "teyvat_artifacts:anemo_crystalfly",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "teyvat_artifacts:ice_crystalfly",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "teyvat_artifacts:geo_crystalfly",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "teyvat_artifacts:electro_crystalfly",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "teyvat_artifacts:dendro_crystalfly",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "teyvat_artifacts:hydro_crystalfly",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "teyvat_artifacts:pyro_crystalfly",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 1
+    }
+  ]
+}

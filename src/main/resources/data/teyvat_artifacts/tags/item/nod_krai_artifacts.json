@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "teyvat_artifacts:a_day_carved_from_rising_winds_flower",
+    "teyvat_artifacts:a_day_carved_from_rising_winds_feather",
+    "teyvat_artifacts:a_day_carved_from_rising_winds_sands",
+    "teyvat_artifacts:a_day_carved_from_rising_winds_goblet",
+    "teyvat_artifacts:a_day_carved_from_rising_winds_circlet",
+    "teyvat_artifacts:aubade_of_morningstar_and_moon_flower",
+    "teyvat_artifacts:aubade_of_morningstar_and_moon_feather",
+    "teyvat_artifacts:aubade_of_morningstar_and_moon_sands",
+    "teyvat_artifacts:aubade_of_morningstar_and_moon_goblet",
+    "teyvat_artifacts:aubade_of_morningstar_and_moon_circlet",
+    "teyvat_artifacts:night_of_the_skys_unveiling_flower",
+    "teyvat_artifacts:night_of_the_skys_unveiling_feather",
+    "teyvat_artifacts:night_of_the_skys_unveiling_sands",
+    "teyvat_artifacts:night_of_the_skys_unveiling_goblet",
+    "teyvat_artifacts:night_of_the_skys_unveiling_circlet",
+    "teyvat_artifacts:silken_moons_serenade_flower",
+    "teyvat_artifacts:silken_moons_serenade_feather",
+    "teyvat_artifacts:silken_moons_serenade_sands",
+    "teyvat_artifacts:silken_moons_serenade_goblet",
+    "teyvat_artifacts:silken_moons_serenade_circlet"
+  ]
+}

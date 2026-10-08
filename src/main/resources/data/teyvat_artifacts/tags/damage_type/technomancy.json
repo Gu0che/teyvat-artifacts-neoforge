@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "cataclysm_spellbooks:technomancy_magic", "required": false }
+  ]
+}

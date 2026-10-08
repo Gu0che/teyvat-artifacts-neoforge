@@ -1,0 +1,90 @@
+{
+  "parent": "teyvat_artifacts:artifact_sets/aubade_of_morningstar_and_moon",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "teyvat_artifacts:night_of_the_skys_unveiling_flower"
+    },
+    "title": {
+      "translate": "tooltip.teyvat_artifacts.set.night_of_the_skys_unveiling"
+    },
+    "description": {
+      "translate": "advancements.teyvat_artifacts.set.night_of_the_skys_unveiling.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "x": 2.0,
+    "y": 0.0
+  },
+  "criteria": {
+    "flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:night_of_the_skys_unveiling_flower"
+          }
+        ]
+      }
+    },
+    "feather": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:night_of_the_skys_unveiling_feather"
+          }
+        ]
+      }
+    },
+    "sands": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:night_of_the_skys_unveiling_sands"
+          }
+        ]
+      }
+    },
+    "goblet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:night_of_the_skys_unveiling_goblet"
+          }
+        ]
+      }
+    },
+    "circlet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:night_of_the_skys_unveiling_circlet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flower"
+    ],
+    [
+      "feather"
+    ],
+    [
+      "sands"
+    ],
+    [
+      "goblet"
+    ],
+    [
+      "circlet"
+    ]
+  ]
+}

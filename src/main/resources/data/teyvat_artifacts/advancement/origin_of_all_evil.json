@@ -1,0 +1,38 @@
+﻿{
+    "parent":  "teyvat_artifacts:root",
+    "display":  {
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "teyvat_artifacts:initiate_flower"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.teyvat_artifacts.origin_of_all_evil.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancements.teyvat_artifacts.origin_of_all_evil.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true,
+                    "hidden":  false,
+                    "x":  2,
+                    "y":  0
+                },
+    "criteria":  {
+                     "has_artifact":  {
+                                          "trigger":  "minecraft:inventory_changed",
+                                          "conditions":  {
+                                                             "items":  [
+                                                                           {
+                                                                               "items":  "#teyvat_artifacts:artifacts"
+                                                                           }
+                                                                       ]
+                                                         }
+                                      }
+                 },
+    "requirements":  [
+                         [
+                             "has_artifact"
+                         ]
+                     ]
+}

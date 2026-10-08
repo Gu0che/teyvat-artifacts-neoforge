@@ -1,0 +1,90 @@
+{
+  "parent": "teyvat_artifacts:artifact_sets/marechaussee_hunter",
+  "display": {
+    "icon": {
+      "count": 1,
+      "id": "teyvat_artifacts:fragment_of_harmonic_whimsy_flower"
+    },
+    "title": {
+      "translate": "tooltip.teyvat_artifacts.set.fragment_of_harmonic_whimsy"
+    },
+    "description": {
+      "translate": "advancements.teyvat_artifacts.set.fragment_of_harmonic_whimsy.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "x": 2.0,
+    "y": 0.0
+  },
+  "criteria": {
+    "flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:fragment_of_harmonic_whimsy_flower"
+          }
+        ]
+      }
+    },
+    "feather": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:fragment_of_harmonic_whimsy_feather"
+          }
+        ]
+      }
+    },
+    "sands": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:fragment_of_harmonic_whimsy_sands"
+          }
+        ]
+      }
+    },
+    "goblet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:fragment_of_harmonic_whimsy_goblet"
+          }
+        ]
+      }
+    },
+    "circlet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "teyvat_artifacts:fragment_of_harmonic_whimsy_circlet"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "flower"
+    ],
+    [
+      "feather"
+    ],
+    [
+      "sands"
+    ],
+    [
+      "goblet"
+    ],
+    [
+      "circlet"
+    ]
+  ]
+}

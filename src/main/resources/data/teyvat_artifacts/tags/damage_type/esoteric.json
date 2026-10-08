@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "esoteric_spell:esoteric_magic", "required": false },
+    { "id": "esoteric_spell:origin_magic", "required": false }
+  ]
+}

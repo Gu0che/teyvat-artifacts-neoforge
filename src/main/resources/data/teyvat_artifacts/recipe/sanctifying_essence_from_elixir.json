@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "teyvat_artifacts:sanctifying_elixir"
+    }
+  ],
+  "result": {
+    "id": "teyvat_artifacts:sanctifying_essence",
+    "count": 4
+  }
+}

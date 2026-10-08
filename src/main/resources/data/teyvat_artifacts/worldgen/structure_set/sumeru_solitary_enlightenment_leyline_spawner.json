@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 348717697,
+    "separation": 8,
+    "spacing": 32
+  },
+  "structures": [
+    {
+      "structure": "teyvat_artifacts:sumeru_solitary_enlightenment_leyline_spawner",
+      "weight": 1
+    }
+  ]
+}

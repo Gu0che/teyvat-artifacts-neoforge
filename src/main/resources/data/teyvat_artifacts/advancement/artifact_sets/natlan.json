@@ -1,0 +1,49 @@
+﻿{
+    "parent":  "teyvat_artifacts:artifact_sets/index",
+    "display":  {
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "teyvat_artifacts:obsidian_codex_flower"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.teyvat_artifacts.artifact_sets.natlan.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancements.teyvat_artifacts.artifact_sets.natlan.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true,
+                    "hidden":  false,
+                    "x":  0,
+                    "y":  20
+                },
+    "criteria":  {
+                     "finale_of_the_deep_galleries":  {
+                                                          "trigger":  "minecraft:impossible"
+                                                      },
+                     "long_nights_oath":  {
+                                              "trigger":  "minecraft:impossible"
+                                          },
+                     "obsidian_codex":  {
+                                            "trigger":  "minecraft:impossible"
+                                        },
+                     "scroll_of_the_hero_of_cinder_city":  {
+                                                               "trigger":  "minecraft:impossible"
+                                                           }
+                 },
+    "requirements":  [
+                         [
+                             "finale_of_the_deep_galleries"
+                         ],
+                         [
+                             "long_nights_oath"
+                         ],
+                         [
+                             "obsidian_codex"
+                         ],
+                         [
+                             "scroll_of_the_hero_of_cinder_city"
+                         ]
+                     ]
+}

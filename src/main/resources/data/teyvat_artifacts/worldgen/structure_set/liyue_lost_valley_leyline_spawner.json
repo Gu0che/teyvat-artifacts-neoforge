@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1050611519,
+    "separation": 8,
+    "spacing": 32
+  },
+  "structures": [
+    {
+      "structure": "teyvat_artifacts:liyue_lost_valley_leyline_spawner",
+      "weight": 1
+    }
+  ]
+}

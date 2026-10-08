@@ -1,0 +1,10 @@
+{
+  "render_type": "cutout",
+  "parent": "minecraft:block/cube_bottom_top_inner_faces",
+  "textures": {
+    "bottom": "teyvat_artifacts:block/trial_spawner/snezhnaya/trial_spawner_bottom",
+    "side": "teyvat_artifacts:block/trial_spawner/snezhnaya/trial_spawner_side_active",
+    "top": "teyvat_artifacts:block/trial_spawner/snezhnaya/trial_spawner_top_ejecting_reward",
+    "particle": "teyvat_artifacts:block/trial_spawner/snezhnaya/trial_spawner_side_active"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "phase=ready": {
+      "model": "teyvat_artifacts:block/liyue_clear_pool_leyline_spawner"
+    },
+    "phase=active": {
+      "model": "teyvat_artifacts:block/liyue_clear_pool_leyline_spawner_active"
+    },
+    "phase=reward": {
+      "model": "teyvat_artifacts:block/liyue_clear_pool_leyline_spawner_reward"
+    }
+  }
+}

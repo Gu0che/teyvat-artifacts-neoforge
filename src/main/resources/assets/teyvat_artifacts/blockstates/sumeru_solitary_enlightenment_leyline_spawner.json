@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "phase=ready": {
+      "model": "teyvat_artifacts:block/sumeru_solitary_enlightenment_leyline_spawner"
+    },
+    "phase=active": {
+      "model": "teyvat_artifacts:block/sumeru_solitary_enlightenment_leyline_spawner_active"
+    },
+    "phase=reward": {
+      "model": "teyvat_artifacts:block/sumeru_solitary_enlightenment_leyline_spawner_reward"
+    }
+  }
+}

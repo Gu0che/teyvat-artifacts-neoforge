@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#teyvat_artifacts:spawns/pyro_crystalfly",
+  "spawners": {
+    "type": "teyvat_artifacts:pyro_crystalfly",
+    "weight": 8,
+    "minCount": 1,
+    "maxCount": 4
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "gtbcs_geomancy_plus:geo_magic", "required": false }
+  ]
+}

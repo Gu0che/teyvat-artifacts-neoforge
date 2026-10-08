@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "teyvat_artifacts:emblem_of_severed_fate_flower",
+    "teyvat_artifacts:emblem_of_severed_fate_feather",
+    "teyvat_artifacts:emblem_of_severed_fate_sands",
+    "teyvat_artifacts:emblem_of_severed_fate_goblet",
+    "teyvat_artifacts:emblem_of_severed_fate_circlet",
+    "teyvat_artifacts:shimenawas_reminiscence_flower",
+    "teyvat_artifacts:shimenawas_reminiscence_feather",
+    "teyvat_artifacts:shimenawas_reminiscence_sands",
+    "teyvat_artifacts:shimenawas_reminiscence_goblet",
+    "teyvat_artifacts:shimenawas_reminiscence_circlet",
+    "teyvat_artifacts:husk_of_opulent_dreams_flower",
+    "teyvat_artifacts:husk_of_opulent_dreams_feather",
+    "teyvat_artifacts:husk_of_opulent_dreams_sands",
+    "teyvat_artifacts:husk_of_opulent_dreams_goblet",
+    "teyvat_artifacts:husk_of_opulent_dreams_circlet",
+    "teyvat_artifacts:ocean_hued_clam_flower",
+    "teyvat_artifacts:ocean_hued_clam_feather",
+    "teyvat_artifacts:ocean_hued_clam_sands",
+    "teyvat_artifacts:ocean_hued_clam_goblet",
+    "teyvat_artifacts:ocean_hued_clam_circlet"
+  ]
+}

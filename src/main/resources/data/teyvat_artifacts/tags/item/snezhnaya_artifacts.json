@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "teyvat_artifacts:heart_of_the_furnace_flower",
+    "teyvat_artifacts:heart_of_the_furnace_feather",
+    "teyvat_artifacts:heart_of_the_furnace_sands",
+    "teyvat_artifacts:heart_of_the_furnace_goblet",
+    "teyvat_artifacts:heart_of_the_furnace_circlet",
+    "teyvat_artifacts:scarlet_proof_flower",
+    "teyvat_artifacts:scarlet_proof_feather",
+    "teyvat_artifacts:scarlet_proof_sands",
+    "teyvat_artifacts:scarlet_proof_goblet",
+    "teyvat_artifacts:scarlet_proof_circlet"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "teyvat_artifacts:sumeru_molten_iron_fortress_leyline_spawner"
+        }
+      ]
+    }
+  ]
+}

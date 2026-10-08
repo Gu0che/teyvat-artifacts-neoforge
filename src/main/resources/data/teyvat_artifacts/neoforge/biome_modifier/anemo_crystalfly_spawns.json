@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#teyvat_artifacts:spawns/anemo_crystalfly",
+  "spawners": {
+    "type": "teyvat_artifacts:anemo_crystalfly",
+    "weight": 8,
+    "minCount": 1,
+    "maxCount": 4
+  }
+}

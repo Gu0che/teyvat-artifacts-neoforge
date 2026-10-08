@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "teyvat_artifacts:inazuma_slumbering_court_leyline_spawner"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.guoche.teyvat_artifacts.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["ApothicCriticalStrikeMixin"],
+  "client": ["ApothicAttributesGuiMixin"],
+  "injectors": {"defaultRequire": 1}
+}

@@ -1,0 +1,49 @@
+﻿{
+    "parent":  "teyvat_artifacts:artifact_sets/index",
+    "display":  {
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "teyvat_artifacts:aubade_of_morningstar_and_moon_flower"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.teyvat_artifacts.artifact_sets.nod_krai.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancements.teyvat_artifacts.artifact_sets.nod_krai.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true,
+                    "hidden":  false,
+                    "x":  0,
+                    "y":  23
+                },
+    "criteria":  {
+                     "a_day_carved_from_rising_winds":  {
+                                                            "trigger":  "minecraft:impossible"
+                                                        },
+                     "aubade_of_morningstar_and_moon":  {
+                                                            "trigger":  "minecraft:impossible"
+                                                        },
+                     "night_of_the_skys_unveiling":  {
+                                                         "trigger":  "minecraft:impossible"
+                                                     },
+                     "silken_moons_serenade":  {
+                                                   "trigger":  "minecraft:impossible"
+                                               }
+                 },
+    "requirements":  [
+                         [
+                             "a_day_carved_from_rising_winds"
+                         ],
+                         [
+                             "aubade_of_morningstar_and_moon"
+                         ],
+                         [
+                             "night_of_the_skys_unveiling"
+                         ],
+                         [
+                             "silken_moons_serenade"
+                         ]
+                     ]
+}

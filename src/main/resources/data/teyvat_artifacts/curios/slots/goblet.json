@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "order": 1000030,
+  "icon": "teyvat_artifacts:slot/empty_goblet_slot",
+  "validators": ["teyvat_artifacts:dedicated_slot"]
+}
+

@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 731785564,
+    "separation": 8,
+    "spacing": 32
+  },
+  "structures": [
+    {
+      "structure": "teyvat_artifacts:fontaine_waterfall_wen_leyline_spawner",
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AAA",
+    "CBC",
+    "III"
+  ],
+  "key": {
+    "A": {
+      "tag": "teyvat_artifacts:artifacts"
+    },
+    "C": {
+      "item": "teyvat_artifacts:crystal_core"
+    },
+    "B": {
+      "item": "minecraft:chest"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "id": "teyvat_artifacts:alchemy_table",
+    "count": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "order": 1000020,
+  "icon": "teyvat_artifacts:slot/empty_sands_slot",
+  "validators": ["teyvat_artifacts:dedicated_slot"]
+}
+

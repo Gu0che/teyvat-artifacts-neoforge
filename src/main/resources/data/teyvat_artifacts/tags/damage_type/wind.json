@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "wind_spellbooks:wind_magic", "required": false }
+  ]
+}

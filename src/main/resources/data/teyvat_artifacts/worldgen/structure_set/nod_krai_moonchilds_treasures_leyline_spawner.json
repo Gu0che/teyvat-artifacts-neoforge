@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 591817166,
+    "separation": 8,
+    "spacing": 32
+  },
+  "structures": [
+    {
+      "structure": "teyvat_artifacts:nod_krai_moonchilds_treasures_leyline_spawner",
+      "weight": 1
+    }
+  ]
+}

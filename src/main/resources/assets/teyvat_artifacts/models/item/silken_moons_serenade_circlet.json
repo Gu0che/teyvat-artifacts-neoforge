@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "teyvat_artifacts:item/silken_moons_serenade_circlet"
+  }
+}

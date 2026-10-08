@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "teyvat_artifacts:item/disenchantment_in_deep_shadow_flower"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "teyvat_artifacts:nod_krai_moonchilds_treasures_leyline_spawner"
+        }
+      ]
+    }
+  ]
+}

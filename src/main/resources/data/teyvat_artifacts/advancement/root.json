@@ -1,0 +1,38 @@
+﻿{
+    "display":  {
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "teyvat_artifacts:lucky_feather"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.teyvat_artifacts.root.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancements.teyvat_artifacts.root.description"
+                                    },
+                    "background":  "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+                    "frame":  "task",
+                    "show_toast":  false,
+                    "announce_to_chat":  false,
+                    "hidden":  false,
+                    "x":  0.0,
+                    "y":  0.0
+                },
+    "criteria":  {
+                     "has_artifact":  {
+                                          "trigger":  "minecraft:inventory_changed",
+                                          "conditions":  {
+                                                             "items":  [
+                                                                           {
+                                                                               "items":  "#teyvat_artifacts:artifacts"
+                                                                           }
+                                                                       ]
+                                                         }
+                                      }
+                 },
+    "requirements":  [
+                         [
+                             "has_artifact"
+                         ]
+                     ]
+}

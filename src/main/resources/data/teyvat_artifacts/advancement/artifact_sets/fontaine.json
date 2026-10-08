@@ -1,0 +1,61 @@
+﻿{
+    "parent":  "teyvat_artifacts:artifact_sets/index",
+    "display":  {
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "teyvat_artifacts:song_of_days_past_flower"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.teyvat_artifacts.artifact_sets.fontaine.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancements.teyvat_artifacts.artifact_sets.fontaine.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true,
+                    "hidden":  false,
+                    "x":  0,
+                    "y":  17
+                },
+    "criteria":  {
+                     "nighttime_whispers":  {
+                                                "trigger":  "minecraft:impossible"
+                                            },
+                     "song_of_days_past":  {
+                                               "trigger":  "minecraft:impossible"
+                                           },
+                     "golden_troupe":  {
+                                           "trigger":  "minecraft:impossible"
+                                       },
+                     "marechaussee_hunter":  {
+                                                 "trigger":  "minecraft:impossible"
+                                             },
+                     "fragment_of_harmonic_whimsy":  {
+                                                         "trigger":  "minecraft:impossible"
+                                                     },
+                     "unfinished_reverie":  {
+                                                "trigger":  "minecraft:impossible"
+                                            }
+                 },
+    "requirements":  [
+                         [
+                             "nighttime_whispers"
+                         ],
+                         [
+                             "song_of_days_past"
+                         ],
+                         [
+                             "golden_troupe"
+                         ],
+                         [
+                             "marechaussee_hunter"
+                         ],
+                         [
+                             "fragment_of_harmonic_whimsy"
+                         ],
+                         [
+                             "unfinished_reverie"
+                         ]
+                     ]
+}

@@ -1,0 +1,37 @@
+﻿{
+    "parent":  "teyvat_artifacts:artifact_sets/index",
+    "display":  {
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "teyvat_artifacts:heart_of_the_furnace_flower"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.teyvat_artifacts.artifact_sets.snezhnaya.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancements.teyvat_artifacts.artifact_sets.snezhnaya.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true,
+                    "hidden":  false,
+                    "x":  0,
+                    "y":  26
+                },
+    "criteria":  {
+                     "heart_of_the_furnace":  {
+                                                  "trigger":  "minecraft:impossible"
+                                              },
+                     "scarlet_proof":  {
+                                           "trigger":  "minecraft:impossible"
+                                       }
+                 },
+    "requirements":  [
+                         [
+                             "heart_of_the_furnace"
+                         ],
+                         [
+                             "scarlet_proof"
+                         ]
+                     ]
+}

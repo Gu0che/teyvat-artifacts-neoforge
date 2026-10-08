@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "familiarslib:sound_magic", "required": false }
+  ]
+}

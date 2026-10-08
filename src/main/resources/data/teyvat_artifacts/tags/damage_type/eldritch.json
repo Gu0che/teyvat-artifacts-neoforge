@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "#irons_spellbooks:eldritch_magic", "required": false },
+    { "id": "traveloptics:reversal", "required": false },
+    { "id": "traveloptics:blackout", "required": false }
+  ]
+}

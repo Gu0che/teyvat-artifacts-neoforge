@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "teyvat_artifacts:item/gladiators_finale_flower"
+  }
+}

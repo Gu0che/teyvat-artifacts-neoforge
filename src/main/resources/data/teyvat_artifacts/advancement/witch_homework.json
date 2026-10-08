@@ -1,0 +1,31 @@
+﻿{
+    "parent":  "teyvat_artifacts:witch_gift",
+    "display":  {
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "teyvat_artifacts:the_little_witchs_dictionary"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.teyvat_artifacts.witch_homework.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancements.teyvat_artifacts.witch_homework.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true,
+                    "hidden":  true,
+                    "x":  2,
+                    "y":  0
+                },
+    "criteria":  {
+                     "granted":  {
+                                     "trigger":  "minecraft:impossible"
+                                 }
+                 },
+    "requirements":  [
+                         [
+                             "granted"
+                         ]
+                     ]
+}

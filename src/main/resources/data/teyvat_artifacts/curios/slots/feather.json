@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "order": 1000010,
+  "icon": "teyvat_artifacts:slot/empty_feather_slot",
+  "validators": ["teyvat_artifacts:dedicated_slot"]
+}
+

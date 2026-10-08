@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "teyvat_artifacts:finale_of_the_deep_galleries_flower",
+    "teyvat_artifacts:finale_of_the_deep_galleries_feather",
+    "teyvat_artifacts:finale_of_the_deep_galleries_sands",
+    "teyvat_artifacts:finale_of_the_deep_galleries_goblet",
+    "teyvat_artifacts:finale_of_the_deep_galleries_circlet",
+    "teyvat_artifacts:long_nights_oath_flower",
+    "teyvat_artifacts:long_nights_oath_feather",
+    "teyvat_artifacts:long_nights_oath_sands",
+    "teyvat_artifacts:long_nights_oath_goblet",
+    "teyvat_artifacts:long_nights_oath_circlet",
+    "teyvat_artifacts:obsidian_codex_flower",
+    "teyvat_artifacts:obsidian_codex_feather",
+    "teyvat_artifacts:obsidian_codex_sands",
+    "teyvat_artifacts:obsidian_codex_goblet",
+    "teyvat_artifacts:obsidian_codex_circlet",
+    "teyvat_artifacts:scroll_of_the_hero_of_cinder_city_flower",
+    "teyvat_artifacts:scroll_of_the_hero_of_cinder_city_feather",
+    "teyvat_artifacts:scroll_of_the_hero_of_cinder_city_sands",
+    "teyvat_artifacts:scroll_of_the_hero_of_cinder_city_goblet",
+    "teyvat_artifacts:scroll_of_the_hero_of_cinder_city_circlet"
+  ]
+}

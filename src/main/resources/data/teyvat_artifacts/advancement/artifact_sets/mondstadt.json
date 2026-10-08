@@ -1,0 +1,85 @@
+﻿{
+    "parent":  "teyvat_artifacts:artifact_sets/index",
+    "display":  {
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "teyvat_artifacts:viridescent_venerer_flower"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.teyvat_artifacts.artifact_sets.mondstadt.title"
+                              },
+                    "description":  {
+                                        "translate":  "advancements.teyvat_artifacts.artifact_sets.mondstadt.description"
+                                    },
+                    "frame":  "task",
+                    "show_toast":  true,
+                    "announce_to_chat":  true,
+                    "hidden":  false,
+                    "x":  0,
+                    "y":  5
+                },
+    "criteria":  {
+                     "thundering_fury":  {
+                                             "trigger":  "minecraft:impossible"
+                                         },
+                     "thundersoother":  {
+                                            "trigger":  "minecraft:impossible"
+                                        },
+                     "pale_flame":  {
+                                        "trigger":  "minecraft:impossible"
+                                    },
+                     "tenacity_of_the_millelith":  {
+                                                       "trigger":  "minecraft:impossible"
+                                                   },
+                     "celestial_gift":  {
+                                            "trigger":  "minecraft:impossible"
+                                        },
+                     "disenchantment_in_deep_shadow":  {
+                                                           "trigger":  "minecraft:impossible"
+                                                       },
+                     "blizzard_strayer":  {
+                                              "trigger":  "minecraft:impossible"
+                                          },
+                     "heart_of_depth":  {
+                                            "trigger":  "minecraft:impossible"
+                                        },
+                     "maiden_beloved":  {
+                                            "trigger":  "minecraft:impossible"
+                                        },
+                     "viridescent_venerer":  {
+                                                 "trigger":  "minecraft:impossible"
+                                             }
+                 },
+    "requirements":  [
+                         [
+                             "thundering_fury"
+                         ],
+                         [
+                             "thundersoother"
+                         ],
+                         [
+                             "pale_flame"
+                         ],
+                         [
+                             "tenacity_of_the_millelith"
+                         ],
+                         [
+                             "celestial_gift"
+                         ],
+                         [
+                             "disenchantment_in_deep_shadow"
+                         ],
+                         [
+                             "blizzard_strayer"
+                         ],
+                         [
+                             "heart_of_depth"
+                         ],
+                         [
+                             "maiden_beloved"
+                         ],
+                         [
+                             "viridescent_venerer"
+                         ]
+                     ]
+}

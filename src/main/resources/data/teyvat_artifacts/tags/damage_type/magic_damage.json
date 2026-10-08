@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "#teyvat_artifacts:lightning",
+    "#teyvat_artifacts:fire",
+    "#teyvat_artifacts:ice",
+    "#teyvat_artifacts:aqua",
+    "#teyvat_artifacts:nature",
+    "#teyvat_artifacts:evocation",
+    "#teyvat_artifacts:eldritch",
+    "#teyvat_artifacts:ender",
+    "#teyvat_artifacts:holy",
+    "#teyvat_artifacts:blood",
+    "#teyvat_artifacts:abyssal",
+    "#teyvat_artifacts:geo",
+    "#teyvat_artifacts:sound",
+    "#teyvat_artifacts:technomancy",
+    "#teyvat_artifacts:wind",
+    "#teyvat_artifacts:spirit_mediumship",
+    "#teyvat_artifacts:esoteric",
+    "#teyvat_artifacts:ars_nouveau",
+    "#teyvat_artifacts:jujutsu",
+    "#teyvat_artifacts:annihilation",
+    { "id": "ars_nouveau:crush", "required": false },
+    { "id": "ars_nouveau:flare", "required": false },
+    { "id": "ars_nouveau:frost", "required": false },
+    { "id": "ars_nouveau:spell", "required": false },
+    { "id": "ars_nouveau:windshear", "required": false }
+  ]
+}

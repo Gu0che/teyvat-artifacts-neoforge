@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "#irons_spellbooks:ender_magic", "required": false },
+    { "id": "irons_spellbooks:dragon_breath_pool", "required": false },
+    { "id": "traveloptics:voidstrike_reaper_bonus_damage", "required": false },
+    { "id": "traveloptics:void_uppercut", "required": false }
+  ]
+}

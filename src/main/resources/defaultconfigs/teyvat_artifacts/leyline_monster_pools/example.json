@@ -1,0 +1,52 @@
+{
+  "_comment": "Example custom pool. Copy this file, rename it, edit it, then select its file name without .json in common.toml.",
+  "_supported": "fixed waves, entity, weight, count, custom_name, finalize_spawn, nbt, equipment, enchantments, max_health, attack_damage, total_armor, speed_multiplier and recursive passengers",
+  "normal_wave_weight": 3,
+  "elite_wave_weight": 1,
+  "normal": {
+    "fixed": false,
+    "draws": 5,
+    "entries": [
+      { "entity": "minecraft:zombie", "weight": 3 },
+      {
+        "entity": "minecraft:skeleton",
+        "weight": 2,
+        "max_health": 30,
+        "total_armor": 6,
+        "speed_multiplier": 1.1,
+        "equipment": {
+          "mainhand": "minecraft:bow",
+          "head": "minecraft:iron_helmet"
+        },
+        "enchantments": {
+          "mainhand": { "minecraft:punch": 2 }
+        }
+      },
+      {
+        "entity": "minecraft:husk",
+        "weight": 1,
+        "count": 2,
+        "custom_name": "Example Guard"
+      }
+    ]
+  },
+  "elite": {
+    "draws": 1,
+    "entries": [
+      {
+        "entity": "minecraft:ravager",
+        "weight": 1,
+        "passengers": [
+          {
+            "entity": "minecraft:skeleton",
+            "equipment": {
+              "mainhand": "minecraft:bow",
+              "head": "minecraft:netherite_helmet"
+            },
+            "nbt": "{Health:30.0f}"
+          }
+        ]
+      }
+    ]
+  }
+}

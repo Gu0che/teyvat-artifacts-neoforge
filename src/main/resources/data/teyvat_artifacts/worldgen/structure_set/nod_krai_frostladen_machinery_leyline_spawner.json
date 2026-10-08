@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 835750293,
+    "separation": 8,
+    "spacing": 32
+  },
+  "structures": [
+    {
+      "structure": "teyvat_artifacts:nod_krai_frostladen_machinery_leyline_spawner",
+      "weight": 1
+    }
+  ]
+}

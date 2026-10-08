@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "order": 1000050,
+  "icon": "teyvat_artifacts:slot/empty_witch_gift_slot",
+  "validators": ["teyvat_artifacts:dedicated_slot"]
+}
