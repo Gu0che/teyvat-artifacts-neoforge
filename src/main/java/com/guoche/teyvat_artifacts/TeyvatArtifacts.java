@@ -811,7 +811,7 @@ public class TeyvatArtifacts {
         NeoForge.EVENT_BUS.addListener(ArtifactEvents::onCurioChange);
         NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, ArtifactEvents::onCurioCanEquip);
         NeoForge.EVENT_BUS.addListener(ArtifactEvents::onPlayerTickPost);
-        NeoForge.EVENT_BUS.addListener(ArtifactEvents::onMobEffectAdded);
+        NeoForge.EVENT_BUS.addListener(ArtifactEvents::onMobEffectApplicable);
         NeoForge.EVENT_BUS.addListener(ArtifactEvents::onRightClickBlock);
         NeoForge.EVENT_BUS.addListener(ArtifactEvents::onLivingHeal);
         NeoForge.EVENT_BUS.addListener(ArtifactEvents::onLivingItemUseFinish);

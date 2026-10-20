@@ -18,6 +18,10 @@ public final class LeylineTrialAccess {
     }
 
     public static boolean tryStart(Player player, ItemStack heldStack, BooleanSupplier startTrial) {
+        if (player.level().getDifficulty() == net.minecraft.world.Difficulty.PEACEFUL) {
+            player.displayClientMessage(Component.translatable("message.teyvat_artifacts.leyline.peaceful"), true);
+            return true;
+        }
         if (TeyvatArtifactsConfig.REQUIRE_LEYLINE_ADVANCEMENTS.get()) {
             if (!(player instanceof ServerPlayer serverPlayer) || !hasRequiredAdvancements(serverPlayer)) {
                 player.displayClientMessage(Component.translatable("message.teyvat_artifacts.leyline.locked"), true);

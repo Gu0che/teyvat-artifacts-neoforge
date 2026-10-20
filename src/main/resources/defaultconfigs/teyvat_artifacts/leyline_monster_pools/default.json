@@ -1,5 +1,5 @@
 {
-  "_comment": "Default fixed waves. Each normal wave spawns one of every listed group at one safe surface point.",
+  "_comment": "Default fixed waves with native attribute bases. Difficulty/wave multipliers are configured in common.toml; equipment and passengers define encounters.",
   "normal_wave_weight": 1,
   "elite_wave_weight": 1,
   "normal": {
@@ -9,10 +9,6 @@
       {
         "entity": "minecraft:vindicator",
         "weight": 1,
-        "max_health": 28,
-        "attack_damage": 12,
-        "total_armor": 6,
-        "speed_multiplier": 1.1,
         "equipment": {
           "mainhand": "minecraft:iron_axe",
           "chest": "minecraft:iron_chestplate"
@@ -21,10 +17,6 @@
       {
         "entity": "minecraft:piglin_brute",
         "weight": 1,
-        "max_health": 52,
-        "attack_damage": 14,
-        "total_armor": 8,
-        "speed_multiplier": 1.1,
         "equipment": {
           "mainhand": "minecraft:golden_axe",
           "head": "minecraft:golden_helmet",
@@ -35,10 +27,6 @@
         "entity": "minecraft:zombie",
         "weight": 1,
         "nbt": "{IsBaby:1b}",
-        "max_health": 22,
-        "attack_damage": 7,
-        "total_armor": 4,
-        "speed_multiplier": 1.1,
         "equipment": {
           "mainhand": "minecraft:iron_sword",
           "head": "minecraft:leather_helmet"
@@ -47,15 +35,9 @@
       {
         "entity": "minecraft:spider",
         "weight": 1,
-        "max_health": 24,
-        "attack_damage": 5,
-        "total_armor": 2,
-        "speed_multiplier": 1.15,
         "passengers": [
           {
             "entity": "minecraft:skeleton",
-            "max_health": 22,
-            "total_armor": 4,
             "equipment": {
               "mainhand": "minecraft:bow",
               "chest": "minecraft:chainmail_chestplate"
@@ -70,10 +52,7 @@
       },
       {
         "entity": "minecraft:witch",
-        "weight": 1,
-        "max_health": 32,
-        "total_armor": 4,
-        "speed_multiplier": 1.1
+        "weight": 1
       }
     ]
   },
@@ -84,15 +63,9 @@
       {
         "entity": "minecraft:ravager",
         "weight": 1,
-        "max_health": 190,
-        "attack_damage": 20,
-        "total_armor": 12,
-        "speed_multiplier": 1.1,
         "passengers": [
           {
             "entity": "minecraft:skeleton",
-            "max_health": 45,
-            "total_armor": 10,
             "equipment": {
               "mainhand": "minecraft:bow",
               "head": "minecraft:netherite_helmet"

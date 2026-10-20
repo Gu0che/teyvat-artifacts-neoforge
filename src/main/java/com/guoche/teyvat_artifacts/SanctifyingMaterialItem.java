@@ -23,10 +23,11 @@ public class SanctifyingMaterialItem extends DescriptiveItem {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
+        int insertIndex = Math.min(1, tooltip.size());
         super.appendHoverText(stack, context, tooltip, flag);
         String key = stack.getDescriptionId() + ".usage";
         if (Language.getInstance().has(key)) {
-            tooltip.add(1, Component.translatable(key).withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
+            tooltip.add(insertIndex, Component.translatable(key).withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
         }
     }
 }

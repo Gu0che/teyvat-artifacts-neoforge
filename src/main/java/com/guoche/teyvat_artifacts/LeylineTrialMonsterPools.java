@@ -113,10 +113,12 @@ final class LeylineTrialMonsterPools {
                 chosen.add(entry);
             }
         }
-        return spawnGroup(level, origin, chosen, spawnRadius, maxSpawnAttempts);
+        return spawnGroup(level, origin, chosen, spawnRadius, maxSpawnAttempts,
+                TeyvatArtifactsConfig.trialStrength(level.getDifficulty(), selectedWave.elite()));
     }
 
-    private static SpawnResult spawnGroup(ServerLevel level, BlockPos origin, List<MonsterEntry> entries, int spawnRadius, int maxSpawnAttempts) {
+    private static SpawnResult spawnGroup(ServerLevel level, BlockPos origin, List<MonsterEntry> entries, int spawnRadius, int maxSpawnAttempts,
+                                          TeyvatArtifactsConfig.TrialStrength strength) {
         if (entries.isEmpty()) {
             return SpawnResult.EMPTY;
         }
@@ -130,7 +132,7 @@ final class LeylineTrialMonsterPools {
             int[] remainingEntities = {MAX_ENTITIES_PER_WAVE};
             boolean valid = true;
             for (MonsterEntry entry : entries) {
-                MobNode root = createMobTree(level, entry, spot.x(), spot.y(), spot.z(), random.nextFloat() * 360.0F, 0, remainingEntities);
+                MobNode root = createMobTree(level, entry, spot.x(), spot.y(), spot.z(), random.nextFloat() * 360.0F, 0, remainingEntities, strength);
                 if (root == null) {
                     valid = false;
                     break;
@@ -237,7 +239,8 @@ final class LeylineTrialMonsterPools {
             double z,
             float yaw,
             int depth,
-            int[] remainingEntities
+            int[] remainingEntities,
+            TeyvatArtifactsConfig.TrialStrength strength
     ) {
         if (entry == null || entry.entity == null || entry.entity.isBlank()
                 || depth > MAX_PASSENGER_DEPTH || remainingEntities[0] <= 0) {
@@ -263,7 +266,7 @@ final class LeylineTrialMonsterPools {
         mob.moveTo(x, y, z, yaw, 0.0F);
         applyEquipment(mob, entry.equipment);
         applyEnchantments(level, mob, entry.enchantments);
-        applyAttributes(mob, entry);
+        applyAttributes(mob, entry, strength);
         if (entry.custom_name != null && !entry.custom_name.isBlank()) {
             mob.setCustomName(Component.literal(entry.custom_name));
         }
@@ -271,7 +274,7 @@ final class LeylineTrialMonsterPools {
         MobNode node = new MobNode(mob);
         if (entry.passengers != null) {
             for (MonsterEntry passengerEntry : entry.passengers) {
-                MobNode passenger = createMobTree(level, passengerEntry, x, y, z, yaw, depth + 1, remainingEntities);
+                MobNode passenger = createMobTree(level, passengerEntry, x, y, z, yaw, depth + 1, remainingEntities, strength);
                 if (passenger != null && passenger.mob.startRiding(mob, true)) {
                     node.passengers.add(passenger);
                 }
@@ -293,6 +296,10 @@ final class LeylineTrialMonsterPools {
             tag.remove("Motion");
             tag.remove("Rotation");
             tag.remove("Passengers");
+            // Keep native attribute bases; custom equipment and non-attribute NBT remain supported.
+            tag.remove("Attributes");
+            tag.remove("attributes");
+            tag.remove("Health");
             mob.load(tag);
         } catch (CommandSyntaxException | RuntimeException exception) {
             LOGGER.warn("Ignoring invalid Leyline trial mob SNBT: {}", snbt, exception);
@@ -337,30 +344,18 @@ final class LeylineTrialMonsterPools {
         }
     }
 
-    private static void applyAttributes(Mob mob, MonsterEntry entry) {
-        setBase(mob.getAttribute(Attributes.MAX_HEALTH), entry.max_health);
-        setBase(mob.getAttribute(Attributes.ATTACK_DAMAGE), entry.attack_damage);
-        if (entry.total_armor != null && Double.isFinite(entry.total_armor) && entry.total_armor >= 0.0D) {
-            AttributeInstance armor = mob.getAttribute(Attributes.ARMOR);
-            if (armor != null) {
-                armor.setBaseValue(armor.getBaseValue() + entry.total_armor - mob.getArmorValue());
-            }
-        }
-        if (entry.speed_multiplier != null && Double.isFinite(entry.speed_multiplier) && entry.speed_multiplier > 0.0D) {
-            AttributeInstance speed = mob.getAttribute(Attributes.MOVEMENT_SPEED);
-            if (speed != null) {
-                speed.setBaseValue(speed.getBaseValue() * entry.speed_multiplier);
-            }
-        }
-        if (entry.max_health != null) {
-            mob.setHealth(mob.getMaxHealth());
-        }
+    private static void applyAttributes(Mob mob, MonsterEntry entry, TeyvatArtifactsConfig.TrialStrength strength) {
+        multiplyBase(mob.getAttribute(Attributes.MAX_HEALTH), strength.health(), entry.health_multiplier);
+        multiplyBase(mob.getAttribute(Attributes.ATTACK_DAMAGE), strength.attack(), entry.attack_multiplier);
+        multiplyBase(mob.getAttribute(Attributes.MOVEMENT_SPEED), strength.speed(), entry.speed_multiplier);
+        mob.setHealth(mob.getMaxHealth());
     }
 
-    private static void setBase(AttributeInstance attribute, Double value) {
-        if (attribute != null && value != null && Double.isFinite(value) && value > 0.0D) {
-            attribute.setBaseValue(value);
-        }
+    private static void multiplyBase(AttributeInstance attribute, double difficultyMultiplier, Double entryMultiplier) {
+        if (attribute == null) return;
+        double multiplier = entryMultiplier != null && Double.isFinite(entryMultiplier) && entryMultiplier > 0.0D
+                ? Math.min(entryMultiplier, 100.0D) : 1.0D;
+        attribute.setBaseValue(attribute.getBaseValue() * difficultyMultiplier * multiplier);
     }
 
     private static EquipmentSlot equipmentSlot(String name) {
@@ -428,8 +423,8 @@ final class LeylineTrialMonsterPools {
             return null;
         }
         return random.nextInt(totalWeight) < normalWeight
-                ? new SelectedWave(pool.normal, normalEntries)
-                : new SelectedWave(pool.elite, eliteEntries);
+                ? new SelectedWave(pool.normal, normalEntries, false)
+                : new SelectedWave(pool.elite, eliteEntries, true);
     }
 
     private static List<MonsterEntry> registeredEntries(WaveDefinition wave) {
@@ -527,7 +522,7 @@ final class LeylineTrialMonsterPools {
         }
         try {
             String hash = HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(Files.readAllBytes(target)));
-            if (!LEGACY_DEFAULT_HASH.equals(hash)) {
+            if (!LEGACY_DEFAULT_HASH.equals(hash) && !"7ec98e7c0a89be826d24e5839fd6e7c1b0157b7f86d420036bb7c6f3d3dd7d14".equals(hash)) {
                 return;
             }
         } catch (NoSuchAlgorithmException exception) {
@@ -566,7 +561,7 @@ final class LeylineTrialMonsterPools {
         private static final SpawnResult EMPTY = new SpawnResult(false, List.of());
     }
 
-    private record SelectedWave(WaveDefinition wave, List<MonsterEntry> entries) {
+    private record SelectedWave(WaveDefinition wave, List<MonsterEntry> entries, boolean elite) {
     }
 
     private static final class MobNode {
@@ -642,9 +637,8 @@ final class LeylineTrialMonsterPools {
         private String nbt;
         private Map<String, String> equipment;
         private Map<String, Map<String, Integer>> enchantments;
-        private Double max_health;
-        private Double attack_damage;
-        private Double total_armor;
+        private Double health_multiplier;
+        private Double attack_multiplier;
         private Double speed_multiplier;
         private List<MonsterEntry> passengers;
     }

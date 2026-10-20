@@ -29,7 +29,52 @@ public final class TeyvatArtifactsConfig {
     public static final ModConfigSpec.DoubleValue LEYLINE_FIVE_STAR_CHANCE_PERCENT;
     public static final ModConfigSpec.IntValue ALCHEMY_AUTOMATIC_INTERVAL_TICKS;
 
+    public record TrialStrength(double health, double attack, double speed) {}
+
+    private record TrialStrengthConfig(ModConfigSpec.DoubleValue health, ModConfigSpec.DoubleValue attack,
+                                       ModConfigSpec.DoubleValue speed) {
+        TrialStrength get() {
+            return new TrialStrength(health.get(), attack.get(), speed.get());
+        }
+    }
+
+    private static final Map<net.minecraft.world.Difficulty, TrialStrengthConfig> NORMAL_TRIAL_STRENGTH =
+            new EnumMap<>(net.minecraft.world.Difficulty.class);
+    private static final Map<net.minecraft.world.Difficulty, TrialStrengthConfig> ELITE_TRIAL_STRENGTH =
+            new EnumMap<>(net.minecraft.world.Difficulty.class);
+
+    private static void defineTrialStrength(ModConfigSpec.Builder builder, String wave,
+                                           Map<net.minecraft.world.Difficulty, TrialStrengthConfig> values) {
+        builder.push(wave);
+        for (net.minecraft.world.Difficulty difficulty : List.of(net.minecraft.world.Difficulty.EASY,
+                net.minecraft.world.Difficulty.NORMAL, net.minecraft.world.Difficulty.HARD)) {
+            double strength = difficulty == net.minecraft.world.Difficulty.EASY ? 1.0D
+                    : difficulty == net.minecraft.world.Difficulty.NORMAL ? 1.25D : 1.5D;
+            double speed = difficulty == net.minecraft.world.Difficulty.EASY ? 1.0D
+                    : difficulty == net.minecraft.world.Difficulty.NORMAL ? 1.05D : 1.1D;
+            builder.push(difficulty.getKey());
+            values.put(difficulty, new TrialStrengthConfig(
+                    builder.comment("Multiplier of the mob's native maximum-health base; equipment modifiers are not multiplied.",
+                            "原生最大生命值基础属性的倍率；不乘算装备提供的属性。")
+                            .defineInRange("healthMultiplier", strength, 0.01D, 100.0D),
+                    builder.comment("Multiplier of native melee attack base. Does not scale arrows, potions or enchantment damage.",
+                            "原生近战攻击基础属性倍率；不缩放箭矢、药水或附魔伤害。")
+                            .defineInRange("attackMultiplier", strength, 0.01D, 100.0D),
+                    builder.comment("Multiplier of native movement-speed base. Vanilla difficulty behavior remains enabled.",
+                            "原生移动速度基础属性倍率；保留原版难度机制。")
+                            .defineInRange("speedMultiplier", speed, 0.01D, 10.0D)));
+            builder.pop();
+        }
+        builder.pop();
+    }
+
+    public static TrialStrength trialStrength(net.minecraft.world.Difficulty difficulty, boolean elite) {
+        TrialStrengthConfig values = (elite ? ELITE_TRIAL_STRENGTH : NORMAL_TRIAL_STRENGTH).get(difficulty);
+        return values == null ? new TrialStrength(1.0D, 1.0D, 1.0D) : values.get();
+    }
+
     public enum LeylineSpawner {
+
         MONDSTADT_SUMMER_COURTYARD(
                 "mondstadt_leyline_spawner",
                 "Mondstadt Leyline Spawner: Summer Courtyard",
@@ -272,6 +317,12 @@ public final class TeyvatArtifactsConfig {
                 "Give every Leyline trial mob 90 seconds of Glowing when it spawns, including passengers.",
                 "试炼怪物生成时是否获得 90 秒发光效果，包括骑乘者。"
         ).define("glowTrialMobs", true);
+        builder.comment("Trial strength multipliers by wave and world difficulty; applied once at spawn, including passengers.",
+                "按普通/精英波次和世界难度设置强度倍率；仅生成时计算，骑乘者也适用。")
+                .push("strength");
+        defineTrialStrength(builder, "normalWave", NORMAL_TRIAL_STRENGTH);
+        defineTrialStrength(builder, "eliteWave", ELITE_TRIAL_STRENGTH);
+        builder.pop();
         builder.comment(
                 "Per-spawner pool overrides. Leave an entry empty to inherit defaultPool.",
                 "各地脉刷怪笼的怪物池覆盖选项。留空表示继承 defaultPool。"

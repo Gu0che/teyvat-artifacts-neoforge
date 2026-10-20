@@ -3,9 +3,7 @@ package com.guoche.teyvat_artifacts;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.Holder;
-import net.minecraft.locale.Language;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -29,8 +27,6 @@ import java.util.List;
 import java.util.Map;
 
 public class ArtifactItem extends Item implements ICurioItem {
-    private static final String DESCRIPTION_KEY_SUFFIX = ".artifact_desc";
-
     private final ArtifactSet set;
     private final ArtifactSlot slot;
     private final ResourceLocation modifierId;
@@ -58,9 +54,11 @@ public class ArtifactItem extends Item implements ICurioItem {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, context, tooltip, flag);
-        appendArtifactDescription(stack, tooltip);
+        // Direct tooltip callers may supply no item-name line.
+        int insertIndex = Math.min(1, tooltip.size());
+        ArtifactTooltipHelper.appendDescription(stack, tooltip);
         if (ArtifactItemData.getStars(stack) > 0) {
-            tooltip.add(1, Component.translatable("tooltip.teyvat_artifacts.remaining_enhancements",
+            tooltip.add(insertIndex, Component.translatable("tooltip.teyvat_artifacts.remaining_enhancements",
                     ArtifactItemData.getRemainingEnhancements(stack)).withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC));
         }
     }
@@ -204,23 +202,4 @@ public class ArtifactItem extends Item implements ICurioItem {
             ArtifactItemData.ensureStars(stack, this, wearer.getRandom());
         }
     }
-
-    private static void appendArtifactDescription(ItemStack stack, List<Component> tooltip) {
-        String key = stack.getDescriptionId() + DESCRIPTION_KEY_SUFFIX;
-        if (!Language.getInstance().has(key)) {
-            return;
-        }
-
-        if (!Screen.hasShiftDown()) {
-            tooltip.add(1, Component.translatable("tooltip.teyvat_artifacts.hold_shift_for_description").withStyle(ChatFormatting.DARK_GRAY));
-            return;
-        }
-
-        String desc = Language.getInstance().getOrDefault(key);
-        int insertIndex = 1;
-        for (String line : desc.split("\\n")) {
-            tooltip.add(insertIndex++, Component.literal(line).withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
-        }
-    }
-
 }

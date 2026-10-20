@@ -419,19 +419,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createRidgeWatchRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(MONDSTADT_RIDGE_WATCH_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, MONDSTADT_RIDGE_WATCH_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getRidgeWatchDisplayPoolSize() {
@@ -448,19 +436,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createThornyCrownRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(MONDSTADT_THORNY_CROWN_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, MONDSTADT_THORNY_CROWN_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getThornyCrownDisplayPoolSize() {
@@ -477,19 +453,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createPeakVindagnyrRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(MONDSTADT_PEAK_VINDAGNYR_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, MONDSTADT_PEAK_VINDAGNYR_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getPeakVindagnyrDisplayPoolSize() {
@@ -506,19 +470,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createValleyRemembranceRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(MONDSTADT_VALLEY_REMEMBRANCE_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, MONDSTADT_VALLEY_REMEMBRANCE_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getValleyRemembranceDisplayPoolSize() {
@@ -535,19 +487,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createDomainGuyunRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(LIYUE_DOMAIN_GUYUN_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, LIYUE_DOMAIN_GUYUN_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getDomainGuyunDisplayPoolSize() {
@@ -564,19 +504,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createLostValleyRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(LIYUE_LOST_VALLEY_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, LIYUE_LOST_VALLEY_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getLostValleyDisplayPoolSize() {
@@ -593,19 +521,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createZhouFormulaRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(LIYUE_ZHOU_FORMULA_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, LIYUE_ZHOU_FORMULA_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getZhouFormulaDisplayPoolSize() {
@@ -622,19 +538,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createMomijiDyedCourtRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(INAZUMA_MOMIJI_DYED_COURT_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, INAZUMA_MOMIJI_DYED_COURT_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getMomijiDyedCourtDisplayPoolSize() {
@@ -651,19 +555,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createSlumberingCourtRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(INAZUMA_SLUMBERING_COURT_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, INAZUMA_SLUMBERING_COURT_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getSlumberingCourtDisplayPoolSize() {
@@ -680,19 +572,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createMoltenIronFortressRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(SUMERU_MOLTEN_IRON_FORTRESS_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, SUMERU_MOLTEN_IRON_FORTRESS_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getMoltenIronFortressDisplayPoolSize() {
@@ -709,19 +589,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createSolitaryEnlightenmentRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(SUMERU_SOLITARY_ENLIGHTENMENT_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, SUMERU_SOLITARY_ENLIGHTENMENT_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getSolitaryEnlightenmentDisplayPoolSize() {
@@ -738,19 +606,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createCityGoldRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(SUMERU_CITY_GOLD_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, SUMERU_CITY_GOLD_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getCityGoldDisplayPoolSize() {
@@ -767,19 +623,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createWaterfallWenRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(FONTAINE_WATERFALL_WEN_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, FONTAINE_WATERFALL_WEN_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getWaterfallWenDisplayPoolSize() {
@@ -796,19 +640,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createDenouementSinRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(FONTAINE_DENOUEMENT_SIN_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, FONTAINE_DENOUEMENT_SIN_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getDenouementSinDisplayPoolSize() {
@@ -825,19 +657,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createFadedTheaterRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(FONTAINE_FADED_THEATER_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, FONTAINE_FADED_THEATER_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getFadedTheaterDisplayPoolSize() {
@@ -854,19 +674,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createDerelictMasonryDockRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(NATLAN_DERELICT_MASONRY_DOCK_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, NATLAN_DERELICT_MASONRY_DOCK_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getDerelictMasonryDockDisplayPoolSize() {
@@ -883,19 +691,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createRainbowSanctumRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(NATLAN_RAINBOW_SANCTUM_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, NATLAN_RAINBOW_SANCTUM_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getRainbowSanctumDisplayPoolSize() {
@@ -912,19 +708,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createMoonchildsTreasuresRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(NOD_KRAI_MOONCHILDS_TREASURES_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, NOD_KRAI_MOONCHILDS_TREASURES_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getMoonchildsTreasuresDisplayPoolSize() {
@@ -941,19 +725,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createFrostladenMachineryRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(NOD_KRAI_FROSTLADEN_MACHINERY_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, NOD_KRAI_FROSTLADEN_MACHINERY_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getFrostladenMachineryDisplayPoolSize() {
@@ -970,19 +742,7 @@ public final class LeylineRewardHelper {
     }
 
     public static List<ItemStack> createInvertedGlacierRewards(RandomSource random, int multiplier) {
-        int rewardCount = (MIN_REWARD_COUNT + random.nextInt(MAX_REWARD_COUNT - MIN_REWARD_COUNT + 1)) * Math.max(1, multiplier);
-        ArrayList<Supplier<ArtifactItem>> pool = new ArrayList<>(SNEZHNAYA_INVERTED_GLACIER_LEYLINE_SPAWNER_REWARD_POOL);
-        ArrayList<ItemStack> rewards = new ArrayList<>(rewardCount);
-
-        while (!pool.isEmpty() && rewards.size() < rewardCount) {
-            Supplier<ArtifactItem> supplier = pool.remove(random.nextInt(pool.size()));
-            ArtifactItem item = supplier.get();
-            ItemStack stack = new ItemStack(item);
-            initializeReward(stack, item, random);
-            rewards.add(stack);
-        }
-
-        return rewards;
+        return createRewards(random, multiplier, SNEZHNAYA_INVERTED_GLACIER_LEYLINE_SPAWNER_REWARD_POOL);
     }
 
     public static int getInvertedGlacierDisplayPoolSize() {

@@ -154,7 +154,6 @@ public final class ArtifactEvents {
     private static final String DISENCHANTMENT_NONCRIT_TICKS_KEY = TeyvatArtifacts.MODID + ".disenchantment_noncrit_ticks";
     private static final String DISENCHANTMENT_NONCRIT_STACKS_KEY = TeyvatArtifacts.MODID + ".disenchantment_noncrit_stacks";
     private static final String SCARLET_NO_HEAL_UNTIL_KEY = TeyvatArtifacts.MODID + ".scarlet_no_heal_until";
-    private static final ThreadLocal<Boolean> UPGRADING_EFFECT = ThreadLocal.withInitial(() -> false);
 
     private static final ResourceLocation ADVENTURER_TWO_PIECE_MAX_HEALTH =
             ResourceLocation.fromNamespaceAndPath(TeyvatArtifacts.MODID, "adventurer_two_piece_max_health");
@@ -364,8 +363,8 @@ public final class ArtifactEvents {
         syncSetBonuses(player);
     }
 
-    public static void onMobEffectAdded(MobEffectEvent.Added event) {
-        if (UPGRADING_EFFECT.get() || !(event.getEntity() instanceof Player player) || player.level().isClientSide) {
+    public static void onMobEffectApplicable(MobEffectEvent.Applicable event) {
+        if (!(event.getEntity() instanceof Player player) || player.level().isClientSide) {
             return;
         }
 
@@ -393,20 +392,14 @@ public final class ArtifactEvents {
             return;
         }
 
-        UPGRADING_EFFECT.set(true);
-        try {
-            player.removeEffect(effect.getEffect());
-            player.addEffect(new MobEffectInstance(
-                    effect.getEffect(),
-                    effect.getDuration(),
-                    effect.getAmplifier() + amplifierBonus,
-                    effect.isAmbient(),
-                    effect.isVisible(),
-                    effect.showIcon()
-            ));
-        } finally {
-            UPGRADING_EFFECT.set(false);
+        // An exact replay (including old saves without provenance) is not a new grant.
+        MobEffectInstance current = player.getEffect(effect.getEffect());
+        if (current != null && current.equals(effect)) {
+            return;
         }
+        // Applicable runs before the vanilla/Bukkit merge decision. Only change the
+        // incoming instance; never remove or re-add an entry in the active-effects map.
+        ArtifactEffectUpgrade.apply(effect, amplifierBonus);
     }
 
     public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {

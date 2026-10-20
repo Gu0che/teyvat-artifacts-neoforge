@@ -3,9 +3,7 @@ package com.guoche.teyvat_artifacts;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.Holder;
-import net.minecraft.locale.Language;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
@@ -24,7 +22,6 @@ import java.util.List;
 import java.util.Locale;
 
 public class WitchGiftItem extends Item implements ICurioItem {
-    private static final String DESCRIPTION_KEY_SUFFIX = ".artifact_desc";
     private static final String LITTLE_WITCH_DICTIONARY_WEIGHT_SYNC_KEY = "LittleWitchDictionaryAdvancementWeight";
 
     private final ResourceLocation maxHealthModifierId;
@@ -43,7 +40,7 @@ public class WitchGiftItem extends Item implements ICurioItem {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
         super.appendHoverText(stack, context, tooltip, flag);
-        appendDescription(stack, tooltip);
+        ArtifactTooltipHelper.appendDescription(stack, tooltip);
         appendLittleWitchDictionaryTooltip(stack, tooltip);
     }
 
@@ -87,24 +84,6 @@ public class WitchGiftItem extends Item implements ICurioItem {
     public void readSyncData(SlotContext slotContext, CompoundTag tag, ItemStack stack) {
         if (tag.contains(LITTLE_WITCH_DICTIONARY_WEIGHT_SYNC_KEY, Tag.TAG_INT)) {
             ArtifactItemData.setLittleWitchDictionaryWeight(stack, tag.getInt(LITTLE_WITCH_DICTIONARY_WEIGHT_SYNC_KEY));
-        }
-    }
-
-    private static void appendDescription(ItemStack stack, List<Component> tooltip) {
-        String key = stack.getDescriptionId() + DESCRIPTION_KEY_SUFFIX;
-        if (!Language.getInstance().has(key)) {
-            return;
-        }
-
-        if (!Screen.hasShiftDown()) {
-            tooltip.add(1, Component.translatable("tooltip.teyvat_artifacts.hold_shift_for_description").withStyle(ChatFormatting.DARK_GRAY));
-            return;
-        }
-
-        String desc = Language.getInstance().getOrDefault(key);
-        int insertIndex = 1;
-        for (String line : desc.split("\\n")) {
-            tooltip.add(insertIndex++, Component.literal(line).withStyle(ChatFormatting.GRAY).withStyle(ChatFormatting.ITALIC));
         }
     }
 
